@@ -21,7 +21,7 @@
       <p class="title-1">Status : {{ }}</p>
       <!-- <input type="status" v-model="status" /> -->
       <br /><br />
-      <button class="button">Update User</button>
+      <button class="button" @click="updateUser">Update User</button>
     </div>
   </div>
 </template>
@@ -38,6 +38,11 @@ export default {
   }
   },
   methods:{  
+    async updateUser(){
+      await this.$store.dispatch('updateUser')
+      alert('User Updated')
+      this.$router.push('/allUsers')
+    },
    goBack() {
       this.$router.push('/log')
     },

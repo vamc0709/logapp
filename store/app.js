@@ -9,6 +9,7 @@ const state = () => ({
   logs: [],
   log_id: null,
 })
+
 const getters = {}
 const mutations = {
   setToken(state, token) {

@@ -15,34 +15,45 @@
       <p class="title-1 title-4">Password :</p>
       <input type="password" id="password" v-model="password" />
 
-      <p class="title-1 title-5">Is Superuser :</p>
-      <input type="radio" id="name" @click="yes" /> Yes
-      <input type="radio" id="name" @click="no" /> No <br /><br />
+      <div class="my-2 flex items-center text-sm">
+        <p class="title-1 title-5">Is Superuser :</p>
+        <el-radio-group v-model="radio2" class="ml-4">
+          <el-radio label="1" :value="isSuper = true" >Yes</el-radio>
+          <el-radio label="2" :value="isSuper = false" >No</el-radio>
+        </el-radio-group>
+      </div>
+      <!-- <input type="radio" class="name1" @click="yes" /> Yes -->
+      <!-- <input type="radio" class="name" @click="no" /> No <br /><br /> -->
       <!-- <el-form-item label="Resources">
     <el-radio-group v-model="form.resource">
       <el-radio label="Sponsor"></el-radio>
       <el-radio label="Venue"></el-radio>
     </el-radio-group>
   </el-form-item> -->
-      <button class="button" @click="onSubmit">Create User</button>
+      <button class="button" @click="createUser">Create User</button>
     </div>
   </div>
 </template>
 
 <script>
+// import { ref } from 'vue'
+
 export default {
   data() {
     return {
       name: '',
       email: '',
       password: '',
-      isSuperuser: false,
+      radio2: '',
+      // isSuper: '',
+      // isSuperuser: false,
     }
   },
   methods: {
-    async onSubmit() {
-      await this.$store.dispatch('onSubmit')
-      this.$router.push('/user')
+    async createUser() {
+      await this.$store.dispatch('createUser')
+      alert('User Created')
+      this.$router.push('/allusers')
     },
     // async yes(){
     //   if(this.isSuperuser)
@@ -51,6 +62,8 @@ export default {
     goBack() {
       this.$router.push('/log')
     },
+
+
   },
 }
 </script>
@@ -105,10 +118,15 @@ input {
   display: block;
   margin-right: 8rem;
 }
-#name {
-  margin-left: -80px;
-  margin-right: -100px;
+label {
+  display: inline-block;
+//   margin-left: -30px;
+//   margin-right: -80px;
 }
+// .name {
+//   margin-left: -80px;
+//   margin-right: -100px;
+// }
 input:hover {
   background: rgb(230, 230, 230);
 }

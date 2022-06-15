@@ -12,7 +12,7 @@
       <p class="title-1 title-3">Type Name :</p>
       <input type="text" v-model="text" />
       <br><br>
-    <button class="button">Create Tag</button>
+    <button class="button" @click="createTag">Create Tag</button>
       </div>
   </div>
 </template>
@@ -26,6 +26,11 @@ export default {
     }
   },
   methods:{  
+    async createTag() {
+      await this.$store.dispatch('createTag')
+      alert('Tag Created')
+      this.$router.push('/tagpage')
+    },
     goBack() {
       this.$router.push('/log')
     },

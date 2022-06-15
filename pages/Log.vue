@@ -34,7 +34,7 @@
               ></el-dropdown-item
             >
             <el-dropdown-item
-              ><el-link href="/alluser" target="_blank"
+              ><el-link href="/allusers" target="_blank"
                 >All Users</el-link
               ></el-dropdown-item
             >
@@ -276,6 +276,7 @@ h4 {
   border: 2px solid white;
   border-radius: 10px;
   font-family: cursive;
+  color: white;
 }
 .filter {
   display: block;
