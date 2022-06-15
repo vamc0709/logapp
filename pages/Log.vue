@@ -189,7 +189,7 @@ export default {
   // },
 }
 </script>
-<style>
+<style lang="scss">
 body {
   background: whitesmoke;
   width: 100%;
@@ -204,7 +204,7 @@ body {
   text-align: left;
   /* align-items: right; */
   margin-right: 1.5rem;
-  margin-top: -6rem;
+  margin-top: -5rem;
   /* font-size: 2.5rem; */
   font-weight: bolder;
   /* font-weight: bolder; */

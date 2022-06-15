@@ -55,7 +55,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
 body {
   width: 100%;
   height: 100%;
