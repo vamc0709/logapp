@@ -23,18 +23,34 @@
             <!-- <nuxt-link to="/CreateUser"
               ><el-dropdown-item>Create User</el-dropdown-item></nuxt-link
             > -->
-            <el-dropdown-item><el-link href="/createuser" target="_blank">Create User</el-link></el-dropdown-item>
-            <el-dropdown-item><el-link href="/updateUser" target="_blank">Update User</el-link></el-dropdown-item>
-            <el-dropdown-item><el-link href="/allUser" target="_blank">All Users</el-link></el-dropdown-item>
-            <el-dropdown-item><el-link href="/createTag" target="_blank">Create Tag</el-link></el-dropdown-item>
+            <el-dropdown-item
+              ><el-link href="/createuser" target="_blank"
+                >Create User</el-link
+              ></el-dropdown-item
+            >
+            <el-dropdown-item
+              ><el-link href="/updateUser" target="_blank"
+                >Update User</el-link
+              ></el-dropdown-item
+            >
+            <el-dropdown-item
+              ><el-link href="/allUser" target="_blank"
+                >All Users</el-link
+              ></el-dropdown-item
+            >
+            <el-dropdown-item
+              ><el-link href="/createTag" target="_blank"
+                >Create Tag</el-link
+              ></el-dropdown-item
+            >
             <!-- <nuxt-link to="/UpdateUser">
               <el-dropdown-item>Update User </el-dropdown-item>
              </nuxt-link
             > -->
             <!-- <nuxt-link to="/AllUser"
               > -->
-              <!-- <el-dropdown-item>All Users</el-dropdown-item> -->
-              <!-- </nuxt-link
+            <!-- <el-dropdown-item>All Users</el-dropdown-item> -->
+            <!-- </nuxt-link
             > -->
             <!-- <nuxt-link to="/CreateTag"
               ><el-dropdown-item>Create Tag</el-dropdown-item></nuxt-link
@@ -126,9 +142,8 @@ export default {
     return {
       search: '',
       value: '',
+      value1: '',
       options: '',
-      //   value1: '',
-      //   value2: '',
       //   enteredGoalValue: '',
       //   goals: [],
 
@@ -223,7 +238,7 @@ body {
   color: #494949;
   font-weight: bold;
   padding: 8px;
-  background-color: rgba(226, 226, 226, 0.877);
+  background-color: rgba(252, 252, 252, 0.877);
   border-radius: 10px;
   margin-right: -40px;
   /* margin: 10px 0px; */
