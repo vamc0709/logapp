@@ -35,7 +35,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-</style>>
 body {
   width: 100%;
   height: 100%;

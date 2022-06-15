@@ -29,17 +29,17 @@
               ></el-dropdown-item
             >
             <el-dropdown-item
-              ><el-link href="/updateUser" target="_blank"
+              ><el-link href="/updateuser" target="_blank"
                 >Update User</el-link
               ></el-dropdown-item
             >
             <el-dropdown-item
-              ><el-link href="/allUser" target="_blank"
+              ><el-link href="/alluser" target="_blank"
                 >All Users</el-link
               ></el-dropdown-item
             >
             <el-dropdown-item
-              ><el-link href="/createTag" target="_blank"
+              ><el-link href="/createtag" target="_blank"
                 >Create Tag</el-link
               ></el-dropdown-item
             >
@@ -189,7 +189,7 @@ export default {
   // },
 }
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 body {
   background: whitesmoke;
   width: 100%;
