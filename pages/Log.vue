@@ -201,10 +201,10 @@ body {
 } */
 .manage {
   display: block;
-  text-align: right;
+  text-align: left;
   /* align-items: right; */
   margin-right: 1.5rem;
-  margin-top: -2rem;
+  margin-top: -6rem;
   /* font-size: 2.5rem; */
   font-weight: bolder;
   /* font-weight: bolder; */
@@ -261,6 +261,7 @@ body {
 h3,
 h4 {
   display: block;
+  margin-top:10px;
   text-align: center;
   font-size: xx-large;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -268,7 +269,7 @@ h4 {
 h4 {
   display: block;
   text-align: center;
-  margin-top: 10px;
+  margin-top: 20px;
   font-size: x-large;
   background: rgb(161, 173, 185);
   width: 100%;
