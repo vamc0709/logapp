@@ -3,16 +3,17 @@
     <header>
       <el-page-header @back="goBack"></el-page-header>
       <h2>All Users</h2>
-      <div>
+      <div id="logs">
         <input
-          type="text"
+          type="search"
           class="search-bar"
-          v-model="search"
+          v-model="queryParams.title"
           placeholder="Search"
+          @change="getUsers"
         />
       </div>
     </header>
-    <hr>
+    <hr />
     <section>
       <h3>Details :</h3>
     </section>
@@ -20,16 +21,29 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
 export default {
   data() {
     return {
-      search: '',
+      queryParams: {
+        page: 1,
+        limit: 20,
+        title: '',
+      },
     }
   },
-  methods:{  
+  computed: {
+    ...mapState(['user'])
+  },
+
+  methods: {
     goBack() {
       this.$router.push('/log')
     },
+     async getUsers() {
+      console.log(this.queryParams)
+      await this.$store.dispatch('getAllUsers', this.queryParams)
+     }
   },
 }
 </script>
@@ -55,7 +69,7 @@ input {
   text-align: left;
   font-size: medium;
 }
-section{
+section {
   background-color: white;
 }
 </style>
