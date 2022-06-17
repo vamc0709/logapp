@@ -6,13 +6,13 @@
       <form @submit.prevent="login">
         <p class="title-1">Email :</p>
         <input
-          type="text"
+          type="email"
           v-model="email"
           placeholder="Enter email"
           required
         /><br /><br />
         <p class="title-2">Password :</p>
-        <input type="text" v-model="password" placeholder="Enter password" required/>
+        <input type="password" v-model="password" placeholder="Enter password" required/>
         <br /><br />
         <button class="button" type="submit" @click="login">Login</button>
       </form>

@@ -71,7 +71,7 @@ p{
   margin-bottom: 50px;
   font: inherit;
   border: 1px solid #fafcfb;
-  padding: 5px;
+  padding: 10px;
   border-radius: 10px;
   font-weight: bold;
   margin-top: 30px;

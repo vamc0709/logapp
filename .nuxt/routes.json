@@ -3,60 +3,70 @@
     "name": "AllUsers",
     "path": "/AllUsers",
     "component": "C:\\\\Users\\\\NSPIRA\\\\Desktop\\\\logfinal\\\\pages\\\\AllUsers.vue",
-    "chunkName": "pages/AllUsers"
+    "chunkName": "pages/AllUsers",
+    "_name": "_1d58e6c6"
   },
   {
     "name": "CreateTag",
     "path": "/CreateTag",
     "component": "C:\\\\Users\\\\NSPIRA\\\\Desktop\\\\logfinal\\\\pages\\\\CreateTag.vue",
-    "chunkName": "pages/CreateTag"
+    "chunkName": "pages/CreateTag",
+    "_name": "_29d9b090"
   },
   {
     "name": "CreateUser",
     "path": "/CreateUser",
     "component": "C:\\\\Users\\\\NSPIRA\\\\Desktop\\\\logfinal\\\\pages\\\\CreateUser.vue",
-    "chunkName": "pages/CreateUser"
+    "chunkName": "pages/CreateUser",
+    "_name": "_d0d201c6"
   },
   {
     "name": "Log",
     "path": "/Log",
     "component": "C:\\\\Users\\\\NSPIRA\\\\Desktop\\\\logfinal\\\\pages\\\\Log.vue",
-    "chunkName": "pages/Log"
+    "chunkName": "pages/Log",
+    "_name": "_56fef704"
   },
   {
     "name": "LoginPage",
     "path": "/LoginPage",
     "component": "C:\\\\Users\\\\NSPIRA\\\\Desktop\\\\logfinal\\\\pages\\\\LoginPage.vue",
-    "chunkName": "pages/LoginPage"
+    "chunkName": "pages/LoginPage",
+    "_name": "_8526015c"
   },
   {
     "name": "profile",
     "path": "/profile",
     "component": "C:\\\\Users\\\\NSPIRA\\\\Desktop\\\\logfinal\\\\pages\\\\profile.vue",
-    "chunkName": "pages/profile"
+    "chunkName": "pages/profile",
+    "_name": "_4902e783"
   },
   {
     "name": "tagpage",
     "path": "/tagpage",
     "component": "C:\\\\Users\\\\NSPIRA\\\\Desktop\\\\logfinal\\\\pages\\\\tagpage.vue",
-    "chunkName": "pages/tagpage"
+    "chunkName": "pages/tagpage",
+    "_name": "_20a36303"
   },
   {
     "name": "tags",
     "path": "/tags",
     "component": "C:\\\\Users\\\\NSPIRA\\\\Desktop\\\\logfinal\\\\pages\\\\tags.vue",
-    "chunkName": "pages/tags"
+    "chunkName": "pages/tags",
+    "_name": "_15d371af"
   },
   {
     "name": "UpdateUser",
     "path": "/UpdateUser",
     "component": "C:\\\\Users\\\\NSPIRA\\\\Desktop\\\\logfinal\\\\pages\\\\UpdateUser.vue",
-    "chunkName": "pages/UpdateUser"
+    "chunkName": "pages/UpdateUser",
+    "_name": "_d7110c2c"
   },
   {
     "name": "index",
     "path": "/",
     "component": "C:\\\\Users\\\\NSPIRA\\\\Desktop\\\\logfinal\\\\pages\\\\index.vue",
-    "chunkName": "pages/index"
+    "chunkName": "pages/index",
+    "_name": "_4d165aa8"
   }
 ]
