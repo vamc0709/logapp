@@ -67,7 +67,7 @@ p{
   margin: auto;
   background: rgb(76, 136, 248);
   color: white;
-  width: 150px;
+  width: 200px;
   margin-bottom: 50px;
   font: inherit;
   border: 1px solid #fafcfb;

@@ -3,20 +3,33 @@ const state = () => ({
   user_id: null,
   name: null,
   email: null,
+  hashed_password: null,
   title: null,
   description: null,
+  stacktrace: null,
   my_logs: [],
   logs: [],
   log_id: null,
+  current_tags: [],
+  all_tags: [],
 })
 
 const getters = {}
 const mutations = {
-  setToken(state, token) {
+  setToken(state, data) {
     state.token = data.token
     state.user_id = data.id
     state.name = data.name
     state.email = data.email
+    state.hashed_password = data.hashed_password
+    // state.title = data.title
+    // state.description = data.description
+    // state.stacktrace = data.stacktrace
+    // state.my_logs = data.my_logs
+    // state.logs = data.logs
+    // state.log_id = data.log_id
+    // state.current_tags = data.current_tags
+    // state.AllTags = data.AllTags
   },
 
 setList(state, data) {
@@ -39,6 +52,11 @@ setList(state, data) {
   updateUser(state, data) {
     const index = state.users.findIndex((user) => user.id === user.id)
     state.users[index].title = data.title
+  },
+  setTags(state, data) {
+    console.log('tags ' + data)
+    state.current_tags.push({ tagText: data })
+    // console.log('after set' + state.current_comments)
   },
 }
 
@@ -107,17 +125,30 @@ const actions = {
       })
   },
 
-  async addTag({ commit, state }, data) {
-    const res = await this.$axios.post('tag/', {
-      text: data.text,
-      log_id: state.Log_id,
-    })
-  },
-
-  async deleteTag({ commit, state }, id) {
+  async deleteTag({ commit, state }) {
     const res = await this.$axios.delete('tag/' + id)
     commit('createdNewPost', res.data)
   },
+  async addTag({ commit, state }, data) {
+    const res = await this.$axios.post('tags', {
+      text: data.text,
+      log_id: state.Log_id,
+    })
+    commit('setTags', data)
+  },
+
+  async getAllTags({ commit, state }, id) {
+    const res = await this.$axios.get('tag/' + id)
+    commit('setTags', res.data)
+  // async deleteTag(tag_id) {
+  //   await this.$store.dispatch('deleteTag', tag_id)
+  //   await this.$store.dispatch('getAllTags', this.$route.params.id)
+  // },
+  // visible() {
+  //   this.isVisible = true
+  //   this.title = this.$store.state.Log
+  // },
+},
 }
 
 export default {

@@ -10,7 +10,8 @@ const _d0d201c6 = () => interopDefault(import('..\\pages\\CreateUser.vue' /* web
 const _56fef704 = () => interopDefault(import('..\\pages\\Log.vue' /* webpackChunkName: "pages/Log" */))
 const _8526015c = () => interopDefault(import('..\\pages\\LoginPage.vue' /* webpackChunkName: "pages/LoginPage" */))
 const _4902e783 = () => interopDefault(import('..\\pages\\profile.vue' /* webpackChunkName: "pages/profile" */))
-const _f03121fa = () => interopDefault(import('..\\pages\\TagPage.vue' /* webpackChunkName: "pages/TagPage" */))
+const _20a36303 = () => interopDefault(import('..\\pages\\tagpage.vue' /* webpackChunkName: "pages/tagpage" */))
+const _15d371af = () => interopDefault(import('..\\pages\\tags.vue' /* webpackChunkName: "pages/tags" */))
 const _d7110c2c = () => interopDefault(import('..\\pages\\UpdateUser.vue' /* webpackChunkName: "pages/UpdateUser" */))
 const _4d165aa8 = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages/index" */))
 
@@ -50,9 +51,13 @@ export const routerOptions = {
     component: _4902e783,
     name: "profile"
   }, {
-    path: "/TagPage",
-    component: _f03121fa,
-    name: "TagPage"
+    path: "/tagpage",
+    component: _20a36303,
+    name: "tagpage"
+  }, {
+    path: "/tags",
+    component: _15d371af,
+    name: "tags"
   }, {
     path: "/UpdateUser",
     component: _d7110c2c,

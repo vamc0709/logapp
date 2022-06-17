@@ -10,10 +10,10 @@
       <input type="text" v-model="name" />
 
       <p class="title-1 title-3">Email :</p>
-      <input type="email" id="email" v-model="email" />
+      <input type="email" v-model="email" />
 
       <p class="title-1 title-4">Password :</p>
-      <input type="password" id="password" v-model="password" />
+      <input type="password" v-model="password" />
 
       <div class="my-2 flex items-center text-sm">
         <p class="title-1 title-5">Is Superuser :</p>
@@ -97,10 +97,12 @@ label {
 }
 input {
   width: 250px;
-  padding: 5px;
-  border: 2px solid #a0f8ce;
+  padding: 10px;
+  font-weight: 500;
+  font-size: medium;
+  border: 2px solid #72b8fa;
   border-radius: 10px;
-  background: rgb(247, 246, 246);
+  background: whitesmoke;
 }
 .title-1 {
   font-weight: bold;
@@ -108,15 +110,27 @@ input {
 }
 .title-2 {
   display: block;
-  margin-right: 11.5rem;
+  margin-right: 13rem;
+  font-weight: bold;
+  margin-bottom: 4px;
 }
 .title-3 {
   display: block;
+  margin-right: 13rem;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+.title-4 {
+  display: block;
   margin-right: 11.5rem;
+  font-weight: bold;
+  margin-bottom: 4px;
 }
 .title-5 {
   display: block;
   margin-right: 8rem;
+  font-weight: bold;
+  margin-bottom: 4px;
 }
 label {
   display: inline-block;
@@ -128,34 +142,34 @@ label {
 //   margin-right: -100px;
 // }
 input:hover {
-  background: rgb(230, 230, 230);
+  background: rgb(252, 251, 251);
 }
-input:active {
-  background: rgb(214, 196, 196);
-  color: #707271;
-}
+// input:active {
+//   background: rgb(214, 196, 196);
+//   color: #707271;
+// }
 .button {
   display: block;
   margin: auto;
   background: rgb(76, 136, 248);
   color: white;
-  width: 250px;
+  width: 280px;
   margin-top: 18px;
   margin-bottom: 30px;
   font: inherit;
   /* // margin-left:17px; */
   border: 1px solid #fafcfb;
-  padding: 5px;
+  padding: 12px;
   border-radius: 10px;
   font-weight: bold;
   margin-top: 10px;
   cursor: pointer;
 }
-.button:hover,
-.button:active {
-  background: rgb(182, 180, 180);
-  color: #707271;
-}
+// .button:hover,
+// .button:active {
+//   background: rgb(182, 180, 180);
+//   color: #707271;
+// }
 .button:focus {
   outline: none;
 }

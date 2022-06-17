@@ -63,20 +63,24 @@
       <div>
         <h4>All Logs</h4>
       </div>
-      <div id="logs">
+      <!-- <div id="logs">
         <input
           type="search"
           class="search-bar"
           v-model="search"
           placeholder="Search logs"
         />
+      </div> -->
+      <div id="app">
+        <input v-model="searchQuery" v-show="!isVisible" />
+        <div v-for="r of resultQuery" :key="r.id">{{ r.title }}</div>
       </div>
-      <span class="date">Sort by DateTime:</span>
       <div class="block">
+        <span class="date">Sort by DateTime:</span>
         <el-date-picker
           v-model="value1"
-          type="datetime"
-          placeholder="Select 'from' date-time"
+          type="date"
+          placeholder="From Date"
           :picker-options="pickerOptions"
         >
         </el-date-picker>
@@ -84,26 +88,34 @@
         <!-- <p>to</p> -->
         <el-date-picker
           v-model="value"
-          type="datetime"
-          placeholder="Select 'to' date-time"
+          type="date"
+          placeholder="To Date"
           :picker-options="pickerOptions"
         >
         </el-date-picker>
         <div>
-          <el-select class="filter" v-model="value2" placeholder="Filter">
-            <!-- <el-option
+          <el-select-v2
+            v-model="value"
+            filterable
+            :options="options"
+            placeholder="Please select"
+            style="width: 240px"
+            multiple
+          />
+          <!-- <el-select class="filter" v-model="value2" placeholder="Filter"> -->
+          <!-- <el-option
             v-for="item in options"
             :key="item.value"
             :label="item.label"
             :value="item.value"
           >
           </el-option> -->
-            <el-option>Tag Title</el-option>
+          <!-- <el-option>Tag Title</el-option>
             <el-option>Unseen</el-option>
             <el-option>All</el-option>
             <el-option>By UserId</el-option>
             <el-option>Bin</el-option>
-          </el-select>
+          </el-select> -->
         </div>
       </div>
     </header>
@@ -140,6 +152,44 @@
 export default {
   data() {
     return {
+      searchQuery: null,
+      resources: [
+        {
+          id: 1,
+          title: 'Tag Title',
+          date: '2020-01-01',
+          userId: 1,
+          tagId: 1,
+        },
+        {
+          id: 2,
+          title: 'Unseen',
+          date: '2020-01-01',
+          userId: 1,
+          tagId: 2,
+        },
+        {
+          id: 3,
+          title: 'All',
+          date: '2020-01-01',
+          userId: 1,
+          tagId: 3,
+        },
+        {
+          id: 4,
+          title: 'By UserId',
+          date: '2020-01-01',
+          userId: 1,
+          tagId: 4,
+        },
+        {
+          id: 5,
+          title: 'Bin',
+          date: '2020-01-01',
+          userId: 1,
+          tagId: 5,
+        },
+      ],
       search: '',
       value: '',
       value1: '',
@@ -149,44 +199,46 @@ export default {
 
       pickerOptions: {
         // shortcuts: [
-          // {
-          //   text: 'Today',
-          //   onClick(picker) {
-          //     picker.$emit('pick', new Date())
-          //   },
-          // },
-          // {
-          //   text: 'Yesterday',
-          //   onClick(picker) {
-          //     const date = new Date()
-          //     date.setTime(date.getTime() - 3600 * 1000 * 24)
-          //     picker.$emit('pick', date)
-          //   },
-          // },
-          // {
-          //   text: 'A week ago',
-          //   onClick(picker) {
-          //     const date = new Date()
-          //     date.setTime(date.getTime() - 3600 * 1000 * 24 * 7)
-          //     picker.$emit('pick', date)
-          //   },
-          // },
+        // {
+        //   text: 'Today',
+        //   onClick(picker) {
+        //     picker.$emit('pick', new Date())
+        //   },
+        // },
+        // {
+        //   text: 'Yesterday',
+        //   onClick(picker) {
+        //     const date = new Date()
+        //     date.setTime(date.getTime() - 3600 * 1000 * 24)
+        //     picker.$emit('pick', date)
+        //   },
+        // },
+        // {
+        //   text: 'A week ago',
+        //   onClick(picker) {
+        //     const date = new Date()
+        //     date.setTime(date.getTime() - 3600 * 1000 * 24 * 7)
+        //     picker.$emit('pick', date)
+        //   },
+        // },
         // ],
       },
-      // value1: '',
-      // value2: '',
-      // value3: '',
     }
   },
-  // methods: {
-  //   addGoal() {
-  //     this.goals.push(this.enteredGoalValue)
-  //     this.enteredGoalValue = ''
-  //   },
-  //   removeGoal() {
-  //     this.goals.splice(1)
-  //   },
-  // },
+  computed: {
+    resultQuery() {
+      if (this.searchQuery) {
+        return this.resources.filter((item) => {
+          return this.searchQuery
+            .toLowerCase()
+            .split(' ')
+            .every((v) => item.title.toLowerCase().includes(v))
+        })
+      } else {
+        return this.resources
+      }
+    },
+  },
 }
 </script>
 <style lang="scss" scoped>
@@ -261,7 +313,7 @@ body {
 h3,
 h4 {
   display: block;
-  margin-top:10px;
+  margin-top: 10px;
   text-align: center;
   font-size: xx-large;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -287,24 +339,24 @@ h4 {
   padding: 3px;
   margin-top: -6.2rem;
 }
-.search-bar {
+#app {
   display: block;
   padding: 5px;
   text-align: center;
-  border: 1px solid rgb(211, 210, 210);
-  border-radius: 5px;
+  // border: 1px solid rgb(211, 210, 210);
+  // border-radius: 5px;
   margin: auto 10rem;
   width: 12%;
   height: 40px;
-  font-size: large;
-  font-weight: 500;
+  // font-size: large;
+  // font-weight: 500;
   /* margin-right: 55rem; */
   margin-top: -1.5rem;
 }
 .date {
   display: block;
   text-align: right;
-  margin-right: 4.7rem;
+  margin-right: 5rem;
   margin-top: -45px;
   font-weight: lighter;
   font-size: large;

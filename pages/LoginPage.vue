@@ -11,7 +11,7 @@
           placeholder="Enter email"
           required
         /><br /><br />
-        <p class="title-1">Password :</p>
+        <p class="title-2">Password :</p>
         <input type="text" v-model="password" placeholder="Enter password" required/>
         <br /><br />
         <button class="button" type="submit" @click="login">Login</button>
@@ -96,42 +96,49 @@ h1 {
 }
 .title-1 {
   font-weight: bold;
-  margin-right: 11.5rem;
+  margin-right: 13rem;
+  margin-bottom: 4px;
+}
+.title-2 {
+  font-weight: bold;
+  margin-right: 11rem;
+  margin-bottom: 4px;
 }
 input {
   width: 250px;
   padding: 12px;
-  font-weight: 700;
-  border: 2px solid #d4fde9;
+  font-weight: 500;
+  font-size: medium;
+  border: 2px solid #72b8fa;
   border-radius: 10px;
-  background: rgb(247, 246, 246);
+  background:whitesmoke;
 }
 input:hover {
-  background: rgb(230, 230, 230);
+  background: white;
 }
-input:active {
-  background: rgb(214, 196, 196);
-  color: #707271;
-}
+// input:active {
+//   background: rgb(214, 196, 196);
+//   color: #707271;
+// }
 .button {
   background: rgb(76, 136, 248);
   color: white;
-  width: 250px;
+  width: 280px;
   margin-top: 18px;
   font: inherit;
   // margin-left:17px;
   border: 1px solid #fafcfb;
-  padding: 5px;
+  padding: 12px;
   border-radius: 10px;
   font-weight: bold;
   margin-top: 10px;
   cursor: pointer;
 }
-.button:hover,
-.button:active {
-  background: rgb(182, 180, 180);
-  color: #707271;
-}
+// .button:hover,
+// .button:active {
+//   background: rgb(182, 180, 180);
+//   color: #707271;
+// }
 .button:focus {
   outline: none;
 }

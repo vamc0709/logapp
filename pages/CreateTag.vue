@@ -69,13 +69,13 @@ h2 {
   margin: auto;
   background: rgb(76, 136, 248);
   color: white;
-  width: 265px;
+  width: 270px;
   margin-top: 18px;
   margin-bottom: 30px;
   font: inherit;
   /* // margin-left:17px; */
   border: 1px solid #fafcfb;
-  padding: 5px;
+  padding: 12px;
   border-radius: 10px;
   font-weight: bold;
   margin-top: 10px;
@@ -83,35 +83,36 @@ h2 {
 }
 input {
   width: 250px;
-  padding: 5px;
-  border: 2px solid #a0f8ce;
+  padding: 10px;
+  border: 2px solid #72b8fa;
   border-radius: 10px;
-  background: rgb(247, 246, 246);
+  background: whitesmoke;
 }
+  input:hover {
+    background: white;
+  }
 .title-1 {
   font-weight: bold;
   margin-right: 160px;
+  margin-bottom: 4px;
 }
 .title-2 {
   display: block;
-  margin-right: 11.5rem;
+  margin-right: 13rem;
 }
 .title-3 {
   display: block;
-  margin-right: 10rem;
+  margin-right: 11.2rem;
 }
-input:hover {
-  background: rgb(230, 230, 230);
-}
-input:active {
-  background: rgb(214, 196, 196);
-  color: #707271;
-}
-.button:hover,
-.button:active {
-  background: rgb(182, 180, 180);
-  color: #707271;
-}
+// input:active {
+//   background: rgb(214, 196, 196);
+//   color: #707271;
+// }
+// .button:hover,
+// .button:active {
+//   background: rgb(182, 180, 180);
+//   color: #707271;
+// }
 .button:focus {
   outline: none;
 }
