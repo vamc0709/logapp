@@ -77,10 +77,6 @@ h3{
     text-align: center;
     margin-top: 10px;
 }
-h3{
-    text-align: center;
-    margin-top: 10px;
-}
 label {
   display: block;
   text-align: center;
