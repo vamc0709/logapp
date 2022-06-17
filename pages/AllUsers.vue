@@ -50,9 +50,10 @@ input {
   margin: 1px auto;
   padding: 8px;
   width: 250px;
-  border: 1px solid #c9ffe5;
+  border: 1px solid #4c4d4c;
   border-radius: 10px;
-  text-align: center;
+  text-align: left;
+  font-size: medium;
 }
 section{
   background-color: white;
