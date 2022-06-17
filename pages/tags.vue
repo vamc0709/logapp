@@ -240,6 +240,10 @@ body {
 .wrapper .details {
   justify-content: space-between;
 }
+/* }
+wrapper .details {
+  justify-content: space-between;
+} */
 
 .wrapper .title button {
   border: none;
