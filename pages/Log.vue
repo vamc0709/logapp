@@ -75,8 +75,8 @@
         <input v-model="searchQuery" v-show="!isVisible" />
         <div v-for="r of resultQuery" :key="r.id">{{ r.title }}</div>
       </div>
-      <div class="block">
         <span class="date">Sort by DateTime:</span>
+      <div class="block">
         <el-date-picker
           v-model="value1"
           type="date"

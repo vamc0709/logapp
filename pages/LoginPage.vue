@@ -14,7 +14,7 @@
         <p class="title-2">Password :</p>
         <input type="password" v-model="password" placeholder="Enter password" required/>
         <br /><br />
-        <button class="button" type="submit" @click="login">Login</button>
+        <button class="button" type="submit" v-loading="loading" @click="login">Login</button>
       </form>
     </div>
     <div class="backdrop" v-show="backdrop" >
