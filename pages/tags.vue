@@ -197,6 +197,11 @@ body {
   align-items: center;
 }
 
+/* .wrapper :where(.title, li, li i) {
+  display: flex;
+  align-items: center;
+} */
+
 .wrapper .title h2 {
   font-size: 21px;
   font-weight: 600;
@@ -240,6 +245,10 @@ body {
 .wrapper .details {
   justify-content: space-between;
 }
+/* }
+wrapper .details {
+  justify-content: space-between;
+} */
 
 .wrapper .title button {
   border: none;
